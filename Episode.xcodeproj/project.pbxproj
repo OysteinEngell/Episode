@@ -14,6 +14,9 @@
 		17C8C2522AE6C0C00070321E /* EpisodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8C2512AE6C0C00070321E /* EpisodeTests.swift */; };
 		17C8C25C2AE6C0C00070321E /* EpisodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8C25B2AE6C0C00070321E /* EpisodeUITests.swift */; };
 		17C8C25E2AE6C0C00070321E /* EpisodeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8C25D2AE6C0C00070321E /* EpisodeUITestsLaunchTests.swift */; };
+		17C8C26B2AE6C6200070321E /* TestDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8C26A2AE6C6200070321E /* TestDataView.swift */; };
+		17C8C2722AE6C8B40070321E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8C2712AE6C8B40070321E /* APIClient.swift */; };
+		17C8C2742AE6CFD10070321E /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8C2732AE6CFD10070321E /* TVShow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		17C8C2572AE6C0C00070321E /* EpisodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EpisodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C8C25B2AE6C0C00070321E /* EpisodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeUITests.swift; sourceTree = "<group>"; };
 		17C8C25D2AE6C0C00070321E /* EpisodeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		17C8C26A2AE6C6200070321E /* TestDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataView.swift; sourceTree = "<group>"; };
+		17C8C2712AE6C8B40070321E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		17C8C2732AE6CFD10070321E /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +100,13 @@
 		17C8C23F2AE6C0BE0070321E /* Episode */ = {
 			isa = PBXGroup;
 			children = (
+				17C8C2702AE6C8830070321E /* ViewModifiers */,
+				17C8C26F2AE6C6C60070321E /* Modules */,
+				17C8C26E2AE6C6B70070321E /* Pages */,
+				17C8C26D2AE6C6590070321E /* Views */,
+				17C8C26C2AE6C6400070321E /* Models */,
 				17C8C2402AE6C0BE0070321E /* EpisodeApp.swift */,
+				17C8C26A2AE6C6200070321E /* TestDataView.swift */,
 				17C8C2422AE6C0BE0070321E /* ContentView.swift */,
 				17C8C2442AE6C0BF0070321E /* Assets.xcassets */,
 				17C8C2462AE6C0BF0070321E /* Preview Content */,
@@ -125,6 +137,43 @@
 				17C8C25D2AE6C0C00070321E /* EpisodeUITestsLaunchTests.swift */,
 			);
 			path = EpisodeUITests;
+			sourceTree = "<group>";
+		};
+		17C8C26C2AE6C6400070321E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17C8C2732AE6CFD10070321E /* TVShow.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		17C8C26D2AE6C6590070321E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		17C8C26E2AE6C6B70070321E /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		17C8C26F2AE6C6C60070321E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				17C8C2712AE6C8B40070321E /* APIClient.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		17C8C2702AE6C8830070321E /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +307,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				17C8C2432AE6C0BE0070321E /* ContentView.swift in Sources */,
+				17C8C26B2AE6C6200070321E /* TestDataView.swift in Sources */,
 				17C8C2412AE6C0BE0070321E /* EpisodeApp.swift in Sources */,
+				17C8C2742AE6CFD10070321E /* TVShow.swift in Sources */,
+				17C8C2722AE6C8B40070321E /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
