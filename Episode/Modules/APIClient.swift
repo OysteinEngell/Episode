@@ -8,37 +8,56 @@
 import Foundation
 
 struct APIClient {
-    var getTVShows: () async throws -> [TVShow]
+    var getTVShows: () async throws -> ()
 }
 
 extension APIClient {
     static let live = APIClient(getTVShows: {
-        let apiKey = ""
-        let urlString = "https://api.themoviedb.org/3/trending/tv/day?language=en-US&api_key=\(apiKey)"
         
-        guard let url = URL(string: urlString) else {
-            throw MyError.invalidURL
-        }
+        let headers = APIClientHeaders.headers
         
-        let (data, _) = try await URLSession.shared.data(from: url)
+        let request = NSMutableURLRequest(url: NSURL(string: "https://api.themoviedb.org/3/trending/tv/day?language=en-US")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
         
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error as Any)
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                print(httpResponse as Any)
+                do{
+                    let tvShowResponse = try JSONDecoder().decode(TVShowResponse.self, from: data!)
+//                    print(tvShowResponse)
+                    
+                    let tvShowArray: [TVShow]
+                    
+                    for tvShow in tvShowResponse.results {
+                        print("TV Show name: \(tvShow.name)")
+                        print("TV Show overview: \(tvShow.overview)")
+                        
+                    }
+                }catch let error{
+                    print(error)
+                }
+                
+            }
+        })
         
-        let response = try decoder.decode(Response.self, from: data)
-        return response.results
+        dataTask.resume()
+        
     })
 }
 
-struct Response: Codable {
+struct TVShowResponse: Codable {
+    let page: Int
     let results: [TVShow]
-    // You can add other properties from the response if needed
+    let total_pages: Int
+    let total_results: Int
 }
-
-enum MyError: Error {
-    case invalidURL
-}
-
 
 
 

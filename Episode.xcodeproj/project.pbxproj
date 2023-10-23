@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17811A872AE735A800B427CA /* APIClientHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17811A862AE735A800B427CA /* APIClientHeaders.swift */; };
+		17811A8A2AE7384800B427CA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 17811A892AE7384800B427CA /* .gitignore */; };
 		17C8C2412AE6C0BE0070321E /* EpisodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8C2402AE6C0BE0070321E /* EpisodeApp.swift */; };
 		17C8C2432AE6C0BE0070321E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8C2422AE6C0BE0070321E /* ContentView.swift */; };
 		17C8C2452AE6C0BF0070321E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17C8C2442AE6C0BF0070321E /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17811A862AE735A800B427CA /* APIClientHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientHeaders.swift; sourceTree = "<group>"; };
+		17811A892AE7384800B427CA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		17C8C23D2AE6C0BE0070321E /* Episode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Episode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C8C2402AE6C0BE0070321E /* EpisodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeApp.swift; sourceTree = "<group>"; };
 		17C8C2422AE6C0BE0070321E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		17C8C2342AE6C0BE0070321E = {
 			isa = PBXGroup;
 			children = (
+				17811A892AE7384800B427CA /* .gitignore */,
 				17C8C23F2AE6C0BE0070321E /* Episode */,
 				17C8C2502AE6C0C00070321E /* EpisodeTests */,
 				17C8C25A2AE6C0C00070321E /* EpisodeUITests */,
@@ -165,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				17C8C2712AE6C8B40070321E /* APIClient.swift */,
+				17811A862AE735A800B427CA /* APIClientHeaders.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17C8C2482AE6C0BF0070321E /* Preview Assets.xcassets in Resources */,
+				17811A8A2AE7384800B427CA /* .gitignore in Resources */,
 				17C8C2452AE6C0BF0070321E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +315,7 @@
 			files = (
 				17C8C2432AE6C0BE0070321E /* ContentView.swift in Sources */,
 				17C8C26B2AE6C6200070321E /* TestDataView.swift in Sources */,
+				17811A872AE735A800B427CA /* APIClientHeaders.swift in Sources */,
 				17C8C2412AE6C0BE0070321E /* EpisodeApp.swift in Sources */,
 				17C8C2742AE6CFD10070321E /* TVShow.swift in Sources */,
 				17C8C2722AE6C8B40070321E /* APIClient.swift in Sources */,

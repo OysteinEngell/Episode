@@ -1,0 +1,8 @@
+
+# .gitignore
+
+# Ignore Xcode user-specific files
+...
+
+# Ignore APIClientHeaders.swift
+APIClientHeaders.swift
