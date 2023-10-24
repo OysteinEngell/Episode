@@ -15,7 +15,6 @@ extension APIClient {
     static let live = APIClient(getTVShows: {
         
         let headers = APIClientHeaders.headers
-        
         let request = NSMutableURLRequest(url: NSURL(string: "https://api.themoviedb.org/3/trending/tv/day?language=en-US")! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
